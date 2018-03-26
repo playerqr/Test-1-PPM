@@ -70,12 +70,24 @@
 			</div>
 		</div>
 		<script>
+			$( document ).on( "click", ".ui-loader", function() {
+				$.mobile.loading( "hide" );
+			});
 			$('#convert').on('click', function () {
 				if($.isNumeric($('#input_convert').val())){
 					$('#hasil_convert_hex').val(parseInt($('#input_convert').val(), 10).toString(16));
 					$('#hasil_convert_bin').val(parseInt($('#input_convert').val(), 10).toString(2));
 				}else{
-					alert("Data input bukan berupa angka")
+					var msgText = "Data input bukan berupa angka",
+						textVisible = true,
+						theme = "b",
+						textonly = true;
+					$.mobile.loading( "show", {
+						text: msgText,
+						textVisible: textVisible,
+						theme: theme,
+						textonly: textonly,
+					});
 				}
 			});		
 			$(document).on('change', '#r', function () {
