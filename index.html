@@ -36,10 +36,10 @@
 			</div>
 			<div data-role=content>
 				<label for="basic">Number Input:</label>
-				<input type="number" name="name" id="input_convert" value="">
+				<input type="text" name="name" id="input_convert" value="">
 				<button id="convert" value="test" class="ui-btn-hidden" aria-disabled="false">Submit</button>
-				<input type="number" name="name" id="hasil_convert_hex" value="">
-				<input type="number" name="name" id="hasil_convert_bin" value="">
+				<input type="text" name="name" id="hasil_convert_hex" value="">
+				<input type="text" name="name" id="hasil_convert_bin" value="">
 			</div>
 			<div data-role=footer>
 				<h1>26416119 - Alexander Thomas</h1>
@@ -68,8 +68,8 @@
 		<script>
 			$('#convert').on('click', function () {
 				if($.isNumeric($('#input_convert').val())){
-					$('#hasil_convert_hex').text() = yourNumber.toString(16);
-					$('#hasil_convert_bin').text() = yourNumber.toString(2);
+					$('#hasil_convert_hex').val(parseInt($('#input_convert').val(), 10).toString(16));
+					$('#hasil_convert_bin').val(parseInt($('#input_convert').val(), 10).toString(2));
 				}else{
 					alert("Data input bukan berupa angka")
 				}
