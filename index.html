@@ -9,30 +9,17 @@
 		<script src="jmobile/jquery.mobile-1.4.5.js"></script>
 	</head>
 	<body>
-		<div data-role=page id=p1>
-			<div data-role=header>
+		<div data-role=page id='p1'>
+			<div data-role=header data-add-back-btn=true>
 				<form>
 					<div class="ui-field-contain">
-						<select name="select-native" id="select-native" data-iconpos="left" data-role=listview>
-							<a href=#p1 data-transition=slide><option>Program convert ke biner dan hexadesimal</option></a>
-							<a href=#p2 data-transition=slide><option>Melihat warna dari rgb yang ditentukan</option></a>
-							<a href=#p3 data-transition=slide><option>Rangkuman materi</option></a>
+						<select name="select-native" class="menu" data-iconpos="left" data-role=listview>
+							<option value='p1' selected>Program convert ke biner dan hexadesimal</option>
+							<option value='p2'>Melihat warna dari rgb yang ditentukan</option>
+							<option value='p3'>Rangkuman materi</option>
 						</select>
 					</div>
 				</form>
-			</div>
-			<div data-role=content>
-				<a href=#p2 data-transition=slide>Program convert ke biner dan hexadesimal</a>
-				<a href=#p3 data-transition=slide>Melihat warna dari rgb yang ditentukan</a>
-				<a href=#p4 data-transition=slide>Rangkuman materi</a>
-			</div>
-			<div data-role=footer>
-				<h1>26416119 - Alexander Thomas</h1>
-			</div>
-		</div>
-		<div data-role=page id=p2>
-			<div data-role=header data-add-back-btn=true>
-				<h1><a href=#home data-transition=slide data-direction=reverse></a></h1>
 			</div>
 			<div data-role=content>
 				<label for="basic">Number Input:</label>
@@ -45,9 +32,17 @@
 				<h1>26416119 - Alexander Thomas</h1>
 			</div>
 		</div>
-		<div data-role=page id=p3>
+		<div data-role=page id='p2'>
 			<div data-role=header data-add-back-btn=true>
-				<h1><a href=#home data-transition=slide data-direction=reverse></a></h1>
+				<form>
+					<div class="ui-field-contain">
+						<select name="select-native" class="menu" data-iconpos="left" data-role=listview>
+							<option value='p1'>Program convert ke biner dan hexadesimal</option>
+							<option value='p2' selected>Melihat warna dari rgb yang ditentukan</option>
+							<option value='p3'>Rangkuman materi</option>
+						</select>
+					</div>
+				</form>
 			</div>
 			<div data-role=content>
 				<legend>Red</legend><input type="range" class="slider" id="r" min="0" max="255" value="0">
@@ -59,9 +54,17 @@
 				<h1>26416119 - Alexander Thomas</h1>
 			</div>
 		</div>
-		<div data-role=page id=p4>
+		<div data-role=page id='p3'>
 			<div data-role=header data-add-back-btn=true>
-				<h1><a href=#home data-transition=slide data-direction=reverse></a></h1>
+				<form>
+					<div class="ui-field-contain">
+						<select name="select-native" class="menu" data-iconpos="left" data-role=listview>
+							<option value='p1'>Program convert ke biner dan hexadesimal</option>
+							<option value='p2'>Melihat warna dari rgb yang ditentukan</option>
+							<option value='p3' selected>Rangkuman materi</option>
+						</select>
+					</div>
+				</form>
 			</div>
 			<div data-role=content>
 			</div>
@@ -70,6 +73,9 @@
 			</div>
 		</div>
 		<script>
+			$('.menu').on( "change", function() {
+				window.location.href = "#"+$(this).val();
+			});
 			$( document ).on( "click", ".ui-loader", function() {
 				$.mobile.loading( "hide" );
 			});
