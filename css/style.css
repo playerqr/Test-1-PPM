@@ -1,2 +1,12 @@
 [data-role=page]{height: 100% !important; position:absolute !important;}
 [data-role=footer]{bottom:0; position:absolute !important; top: auto !important; width:100%;}  
+@media all and (max-width: 300px) {
+	.my-breakpoint .ui-block-a,
+	.my-breakpoint .ui-block-b,
+	.my-breakpoint .ui-block-c,
+	.my-breakpoint .ui-block-d,
+	.my-breakpoint .ui-block-e {
+		width: 100%;
+		float: none;
+	}
+}

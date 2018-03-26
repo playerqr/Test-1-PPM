@@ -1,0 +1,20 @@
+v0.1:
+Kerangka untuk tugas dan button untuk pindah page
+v0.2.1:
+Kerangka untuk nomor 2
+v0.2.2:
+Penambahan script untuk kalkulator
+v0.2.3:
+Penambahan folder jquery mobile dan css
+v0.2.4:
+Pengerjaan ulang script untuk kalkulator
+v0.3.0:
+Penambahan kerangka untuk nomor 3
+v0.3.1:
+Penambahan script untuk nomor 3 dan penambahan legend untuk tiap slider
+v0.4.0:
+Merubah alert html menjadi loader jquery
+v0.5.0:
+Mengurangi halaman menjadi 3 halaman, menambahkan script untuk berpindah halaman berdasarkan menu
+v0.6.0:
+Penambahan materi page terakhir
